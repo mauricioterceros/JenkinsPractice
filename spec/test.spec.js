@@ -1,5 +1,3 @@
-var Calculator = require('../js/1.js');
-
 describe('Addition of two numbers', function() {
 	var calculator = new Calculator();
 	it ('add two numbers', function(){

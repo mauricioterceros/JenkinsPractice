@@ -4,13 +4,14 @@ module.exports = function(grunt) {
 	});
 
 	grunt.registerTask('locationCI', function() {
-		console.log('We are located at Recoleta!');
+		console.log('We are located at UPB!');
 	});
 
 	grunt.registerTask('ciProcess', ['greetingsCI','locationCI']);
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-jasmine');
 
 
 
@@ -31,6 +32,14 @@ module.exports = function(grunt) {
 		    files: 'js/*.js',
 		    tasks: ['concat:js']
 		  },
-		},
+	  },
+	  jasmine: {
+	    JS: {
+	      src: 'js/*.js',
+	      options: {
+	        specs: 'spec/*.spec.js'
+	      }
+	    }
+	  }
 	});
 };
