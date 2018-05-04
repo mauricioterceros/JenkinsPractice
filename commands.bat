@@ -1,0 +1,1 @@
+npm install & grunt ciProcess & npm install grunt-contrib-jasmine --save-dev & grunt jasmine
