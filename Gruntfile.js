@@ -1,10 +1,12 @@
 module.exports = function(grunt) { 
+	var option = grunt.option('env');
 	grunt.registerTask('greetingsCI', function() {
 		console.log('Hello CI class!');
 	});
 
 	grunt.registerTask('locationCI', function() {
 		console.log('We are located at UPB!');
+		console.log(option);
 	});
 
 	grunt.registerTask('ciProcess', ['greetingsCI','locationCI']);
@@ -16,6 +18,7 @@ module.exports = function(grunt) {
 
 
 	// Project configuration. 
+
 	grunt.initConfig({
 	  concat: {
 	    js: {
