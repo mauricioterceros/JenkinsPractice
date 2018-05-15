@@ -1,5 +1,6 @@
 module.exports = function(grunt) { 
 	var option = grunt.option('env');
+
 	grunt.registerTask('greetingsCI', function() {
 		console.log('Hello CI class!');
 	});
