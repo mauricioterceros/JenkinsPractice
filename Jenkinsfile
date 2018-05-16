@@ -1,9 +1,9 @@
 node {
-   stage('Build') {
+   stage('Build NEW') {
       echo "build new"
       build job: 'Step1'
    }
-   stage('Preparation') {
+   stage('Preparation NEW') {
       echo "Preparation modified"
       build job: 'Step2'
    }
