@@ -1,11 +1,11 @@
 node {
-    stage('Build') {
-      echo "build"
-      build job: 'Step2'
+   stage('Build') {
+      echo "build new"
+      build job: 'Step1'
    }
    stage('Preparation') {
-      echo "Preparation"
-      build job: 'Step1'
+      echo "Preparation modified"
+      build job: 'Step2'
    }
    stage('Results') {
       echo "Results"
